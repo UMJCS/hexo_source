@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: MInJIE 闵杰的技术分享博客
-subtitle:
+title: MInJIE's Tech-blog
+subtitle: MInJIE's Tech-blog 
 description:
-author: MINJIE
+author: MINJIE 闵杰
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -63,11 +63,12 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: hipaper
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 # Deployment #部署, 同时发布在 GitHub 和 GitCafe 上面
 deploy:
 - type: git
-  repo: git@github.com:UMJCS/minjie.github.io.git,master
+  repo: git@github.com:UMJCS/UMJCS.github.io.git
+  branch: master
