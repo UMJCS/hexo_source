@@ -1,5 +1,5 @@
 ---
-title: tensorflow 学习笔记
+title: Tensorflow 学习笔记
 date: 2017-07-02 22:31:10
 tags: 标签
 categories: Machine learning
@@ -50,7 +50,7 @@ print sess.run(hello)
 
 ## Part 2 Tutorial for beginners
 
-### MNIST (dataset http://yann.lecun.com/exdb/mnist/)
+### MNIST (Dataset http://yann.lecun.com/exdb/mnist/)
 Consists of images of handwritten digits and labels attach to it
 If you want to get data from this set 
 you should add two lines of codes into your file
@@ -58,6 +58,7 @@ you should add two lines of codes into your file
 ```
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
+
 ```
 1. Data include( Inorder to learned from separate data)
     1. mnist.train
@@ -73,3 +74,15 @@ entry in the tensor ranges [0,1]
 
 ### Softmax Regression
 A list of values between 0 and 1 that add up to 1
+
+### Differences in Details
+
+1. placeholder() && Variable() && Constant()
+    1. placeholder can give input to it 
+    2. Variable set init values
+    3. Constant set const values
+2. Session() && InteractiveSession()
+    1. can run without item fo InteractiveSession
+        1. tf.InteractiveSession()加载它自身作为默认构建的session，tensor.eval()和operation.run()取决于默认的session.
+        2. InteractiveSession允许变量不需要使用session就可以产生结构。
+    2. InteractiveSession should close in the end 
